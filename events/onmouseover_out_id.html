@@ -1,0 +1,29 @@
+<html>
+   <head>   
+     <title> ommouseover Event example</title>
+   </head>
+   
+   <body>
+
+    <h1 id="headingtag"> Hover on me </h1>
+
+   
+   
+      
+      <script type = "text/javascript">
+        document.getElementById("headingtag").onmouseover = function(){
+            document.getElementById("headingtag").innerHTML = "On mouse over"
+            this.style.background = 'red'
+        }
+        
+        document.getElementById("headingtag").onmouseout = function(){
+            document.getElementById("headingtag").innerHTML = "On mouse OUT"
+            this.style.background = 'green'
+        }
+
+      
+        
+     </script>     
+      
+   </body>
+</html>

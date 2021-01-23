@@ -1,0 +1,34 @@
+<html>
+   <head>   
+     <title>  Doubt Event Accsing using DOM property(using ID) And HTML Attribute example</title>
+
+
+   </head>
+   
+   <body>
+     <input type = "button" id="btn-focus" 
+     onfocus="this.style.background='red'; this.style.color='green'; this.value = 'Mouse Focus Event' " 
+     onblur="this.style.background='yellow'; this.style.color='purple'; this.value = 'Mouse Blur Event' "
+     onfocus ="onFocusevent()" onblur="onBlurevent()"  value = "Say Hello" />
+ 
+     <script type = "text/javascript">
+       
+        function onFocusevent(){
+             var focus = document.getElementById("btn-focus")
+             focus.value = "On Focus"
+             focus.style.background = 'orange'
+         }
+         
+         function onBlurevent(){
+             var blur = document.getElementById("btn-focus")
+             blur.value = "On Blur"
+             blur.style.background = 'pink'
+         }
+         
+      </script>     
+
+      
+      
+      
+   </body>
+</html>

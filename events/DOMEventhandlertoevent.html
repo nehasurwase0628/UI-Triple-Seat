@@ -1,0 +1,33 @@
+<html>
+   <head>   
+     <title> Event Accsing using DOM property(Event handler to event) example</title>
+   </head>
+   
+   <body>
+    
+      <input type = "button" id="btn-hover-out"  value = "Say Hello" />
+   
+      
+      <script type = "text/javascript">
+          document.getElementById("btn-hover-out").onmouseover = onFocusevent;
+          document.getElementById("btn-hover-out").onmouseout = onBlurevent;
+          
+          function onFocusevent(){
+             
+            var focus = document.getElementById("btn-hover-out")
+            focus .value = "On Hover"
+            focus.style.background = 'orange'
+        }
+        
+       function onBlurevent(){
+      
+            var blur = document.getElementById("btn-hover-out")
+            blur .value = "On Out"
+            blur.style.background = 'pink'
+        }
+        
+       
+     </script>     
+      
+   </body>
+</html>

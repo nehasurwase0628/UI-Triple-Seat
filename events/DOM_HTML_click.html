@@ -1,0 +1,30 @@
+<html>
+   <head>   
+     <title> Event Accsing using DOM property(using ID) And HTML Attribute example</title>
+     <!-- when DOM(script is in body) & HTML, takes the DOM property
+          when DOM(script is in head) & HTML, takes the HTML property -->
+
+
+ </head>
+   
+   <body>
+     <input type = "button" id="btn" value="TRy it" onclick="onClickevent1()"/>  
+     <!-- using html attribute -->
+
+     <script type = "text/javascript">
+      document.getElementById("btn").onclick = onClickevent2;
+      //using DOM Property
+     function onClickevent2(){
+                                    alert("Using DOM property")
+                              }
+
+      function onClickevent1(){
+                              alert("Using html attribute")
+                             }
+    </script> 
+     
+      
+      
+      
+   </body>
+</html>
