@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling Example 3</title>
+    <style>
+        .divclass{
+            display: table-cell;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="divclass" >
+        DIV 1
+        <div id="div2" class="divclass" >
+            DIV 2
+            <div id="div3" class="divclass" >
+                DIV 3
+                
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+         var divElements = document.getElementsByTagName('div');
+            for(var i = 0 ; i < divElements.length ; i++){
+                divElements[i].onclick = function(event){
+              //  event.stopPropagation();
+             //   event.cancelBubble=true
+                this.style.background = "red";
+                alert(this.getAttribute("id") + " Background Changed");
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <title> class="colors">Colors</title>  
+</head>  
+<body>  
+    <h1> JavaScript Query Selector</h1>  
+    <h1 class="myClass">Class 1</h1>  
+    <p class="myClass"> Myclass</p>  
+
+    <div id="firstid">  
+    <p> It is the div p paragraph</p>  
+    <p class="pclass"> div p class</p>  
+    </div>  
+
+    <p id="myid"> It is p id</p>  
+    <div id="divid"> It is div id</div>  
+
+    <input type="button" value="Try it"> 
+
+<script> 
+document.write("Output of query Selector " + "<br>")
+ document.write(" query Selector by class name" + "<br>")
+ document.write(document.querySelector(".pclass").innerHTML + "<br>" )
+
+document.write(" query Selector by id" + "<br>")
+document.write(document.querySelector("#divid").innerHTML + "<br>" )
+
+
+document.write(" query Selector by attribute" + "<br>")
+document.write(document.querySelector('[type]').innerHTML + "<br>" ) //doubt
+
+
+        // Element selector  
+        document.write(" query Selector by tagname" + "<br>")
+        document.write("Only query Selector" + "<br>")
+        var e=document.querySelector("p");  
+        document.write(e.innerHTML + "<br>");   
+        document.write("All p element" + "<br>")
+        var e=document.querySelectorAll("p" ); 
+        document.write(e[0].innerHTML + "<br>"); 
+        document.write(e[1].innerHTML + "<br>"); 
+        document.write(e[2].innerHTML + "<br>");  
+        document.write(e[3].innerHTML + "<br>"); 
+        document.write(e[4].innerHTML + "<br>"); //undefined
+ </script>  
+</body>  
+</html>  

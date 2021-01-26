@@ -1,0 +1,37 @@
+<html>
+   <head>   
+     <title> special Method addeventlistener and removeEventListener  example</title>
+   </head>
+   
+   <body>  
+    
+    <button id = "btn"> Click me </button>  
+    <button  onclick="removeeventhandler()"> Remove Event Handler </button>  
+   
+    <script>  
+    btn.addEventListener("mouseover", changecoloronover, false);  
+    btn.addEventListener("mouseout",  changecoloronout, false);  
+
+    function changecoloronover() {  
+        this.style.background = 'purple'
+        this.style.color = 'white'
+        this.innerHTML = "On Mouse Hover"
+    //   document.getElementById("btn").style.background = 'yellow'
+    }  
+
+    function changecoloronout() {  
+        this.style.background = 'pink'
+        this.style.color = 'red'
+        this.innerHTML = "On Mouse Out"
+    //   document.getElementById("btn").style.background = 'yellow'
+    }
+
+    function removeeventhandler(){
+        btn.removeEventListener("mouseover", changecoloronover, false);  
+        btn.removeEventListener("mouseout",  changecoloronout, false);  
+
+    }
+
+    </script>  
+    </body>  
+</html>

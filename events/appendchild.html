@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>DOM appendChild() Method</title> 
+    <style> 
+        h1, 
+        h2 { 
+            font-weight: bold; 
+            color: green; 
+        } 
+          
+        body { 
+            margin-left: 130px; 
+        } 
+    </style> 
+</head> 
+  
+<body id="asd"> 
+    <!-- doubt = when you want add one element then what to do  -->
+    <h1>GeeksForGeeks</h1> 
+    <h2>DOM appendChild() Method</h2> 
+    <ul id="gfg"> 
+        <li>Computer Network</li> 
+        <li>Data Structures using C</li> 
+    </ul> 
+    <button onclick="geeks()">Submit</button> 
+    <script> 
+        // function geeks() { 
+        //     var node = document.createElement("LI"); 
+        //     var textnode =  
+        //         document.createTextNode("Web Technology"); 
+        //     node.appendChild(textnode); 
+        //     document.getElementById("gfg").appendChild(node); 
+        // } 
+
+        function geeks() { 
+            let parent = document.createElement("div")
+            let p = document.createElement("p")
+            parent.append(p)
+
+            console.log(parent.childNodes) // NodeList [ <p> ]
+        } 
+    </script> 
+</body> 
+  
+</html> 

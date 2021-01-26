@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attribute </title>
+</head>
+<body>
+    <h1 id="show"> Heading tag 1 </h1>
+    <input type="button" value=" Attribute Method" 
+                         onclick="createattribute()"
+                         ondblclick="removeattribute()" 
+                         onmouseout="setattribute()" 
+                         onblur="getattribute()">
+
+    <script>
+        function setattribute(){
+            document.getElementById("show").innerHTML = "SET ATTRIBUTE"
+            document.getElementById("show").setAttribute('class','img')
+            document.getElementById("show").setAttribute('style',"background:green")
+        }
+        function getattribute(){
+            document.getElementById("show").innerHTML = "GET ATTRIBUTE"
+            alert(document.getElementById("show").getAttribute("class"))
+           
+        }
+        function removeattribute(){
+            document.getElementById("show").innerHTML = "REMOVE ATTRIBUTE"
+            document.getElementById("show").removeAttribute('class','img')
+            document.getElementById("show").removeAttribute('style',"background:green")
+        }
+
+        function createattribute(){
+            document.getElementById("show").innerHTML = "CREATE ATTRIBUTE"
+            var node = document.getElementById("show");
+            var a = document.createAttribute("style");
+            a.value = "background:orange"; //style = background:orange
+            node.setAttributeNode(a);
+            //  document.getElementById("show").createAttribute('class','heading')
+            // document.getElementById("show").createAttribute('style',"background:orange")
+        }
+        
+    </script>
+    
+</body>
+</html>

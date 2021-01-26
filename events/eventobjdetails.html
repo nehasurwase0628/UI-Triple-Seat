@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object Example </title>
+</head>
+<body>
+    <input type="button" value="Click Me" id="btn"
+                                onclick="getEventDetails(event)"
+                                onmouseover="getEventDetails(event)"
+                                onmouseout="getEventDetails(event)">
+    <br><br><br>
+    <div id="resultDiv">
+        Event Object Parameter
+
+    </div>
+    <script>
+        function getEventDetails(event){
+            console.log(event)
+            var sourceElement;
+
+            if(event.srcElement){
+                sourceElement = event.srcElement;
+            } else {
+                sourceElement = event.target;
+            }
+
+            var eventDetails = "Event = " + event.type + "<br/>" + "X = " + event.clientX
+            + "<br/>" +  "Y = " + event.clientY
+            + "<br/>" +  "Target Type = " + sourceElement.type
+            + "<br/>" + "Target Tag Name = " + sourceElement.tagName
+            + "<br/>";
+
+            document.getElementById("resultDiv").innerHTML = eventDetails;
+        }
+    </script>
+</body>
+</html>

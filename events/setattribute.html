@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attribute </title>
+</head>
+<body>
+    <h1 id="show"> Heading tag 1 </h1>
+    <input type="button" value="Set Attribute" onclick="addattribute()"
+                                 ondblclick="removeattribute()" onmouseout="setattribute()">
+
+    <script>
+        function setattribute(){
+            document.getElementById("show").setAttribute('class','img')
+            document.getElementById("show").setAttribute('style',"background:green")
+        }
+
+        function removeattribute(){
+            document.getElementById("show").removeAttribute('class','img')
+            document.getElementById("show").removeAttribute('style',"background:green")
+        }
+
+        function addattribute(){
+            var node = document.getElementById("show");
+            var a = document.createAttribute("my_attrib");
+            a.value = "newVal"; //my_attrib = newVal
+            node.setAttributeNode(a);
+            console.log(node.getAttribute("my_attrib")); // "newVal"
+        //     document.getElementById("show").createAttribute('class','heading')
+        //     document.getElementById("show").createAttribute('style',"background:orange")
+        }
+        
+    </script>
+    
+</body>
+</html>

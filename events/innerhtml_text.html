@@ -3,28 +3,24 @@
   
 <head> 
     <title> 
-        Difference between  
-      InnerHTML and InnerText 
+                            Difference between  
+                          InnerHTML and InnerText 
     </title> 
 </head> 
   
-<body style="text-align:center;"> 
-    
-  <h1 style="color:green">UI-Triple-Seat</h1> 
+<body> 
+
   
     <div id="test"> 
         The following element contains some 
         <codes>code</codes> and 
         <italic>some text</italic>. 
     </div> 
-    <p></p> 
-    <button onClick="innerTextFn()"> 
-        innerText 
-    </button> 
-    <button onClick="innerHTMLFn()"> 
-        innerHTML 
-    </button> 
-    <p id="op"></p> 
+ 
+    <button onClick="innerTextFn()"> innerText </button> 
+    <button onClick="innerHTMLFn()">  innerHTML </button> 
+   
+   
   
     <script> 
         function innerTextFn() { 
@@ -36,6 +32,8 @@
             var x = document.getElementById('test'); 
             alert(x.innerHTML); 
         } 
+
+   
     </script> 
 </body> 
   

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- http://help.dottoro.com/ljinxrmt.php -->
+    <script type="text/javascript">
+        function OnButtonDown (button) {
+            button.style.color = "#ff0000";
+        }
+        function OnButtonUp (button) {
+            button.style.color = "#000000";
+        }
+
+        function Init () {
+            var button = document.getElementById ("testButton");
+            if (button.addEventListener) {  // all browsers except IE before version 9
+                button.addEventListener ("mousedown", function () {OnButtonDown (button)}, false);
+                button.addEventListener ("mouseup", function () {OnButtonUp (button)}, false);
+            }
+            else {
+                if (button.attachEvent) {   // IE before version 9
+                    button.attachEvent ("onmousedown", function () {OnButtonDown (button)});
+                    button.attachEvent ("onmouseup", function () {OnButtonUp (button)});
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="Init ()">
+    Click on the following button and see its text color.
+    <br />
+    <button id="testButton">Test button</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+   <head>   
+     <title> special Method 2 or more event handler using addeventlistener example</title>
+   </head>
+   
+   <body>  
+    
+    <button id = "btn"> Click me </button>  
+   
+    <script>  
+    btn.attachEvent("onclick", changecoloronover, false);  
+    
+
+    function changecoloronover() {  
+        document.write("Handler 1")
+       alert("Handler 1")
+    }  
+
+   
+
+   
+
+    </script>  
+    </body>  
+</html> -->
